@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+
+	<ui:composition template="/WEB-INF/facelets/templates/defaultLayout.xhtml">
+	<ui:define name="title">
+		<h:outputText value="General Construction" />
+	</ui:define>
+	<ui:define name="content">
+		<h:form>
+			<p:accordionPanel>
+		        <p:tab title="Rehab">
+		            <h:panelGrid columns="2" cellpadding="10">
+		            	<h:graphicImage height="400px;" value="/images/dynamic/?file=rehab.jpg"/>
+		                <h:outputText
+		                    value="Rehab construction loans are a type of mortgage loan that is commonly used with real estate investors. Here are the basics of rehab construction loans. Rehab Construction Loans. A rehab construction loan is utilized to facilitate the rehabilitation of a property that is in disrepair." />
+		            </h:panelGrid>
+		        </p:tab>
+		        <p:tab title="New construction">
+		            <h:panelGrid columns="2" cellpadding="10">
+		            	<h:graphicImage height="400px;" value="/images/dynamic/?file=newConstruction.jpg"/>
+		                <h:outputText value="New construction refers to site preparation for, and construction of, entirely new structures and/or significant extensions to existing structures whether or not the site was previously occupied." />
+		            </h:panelGrid>
+		        </p:tab>
+		        <p:tab title="Remodeling">
+		            <h:panelGrid columns="2" cellpadding="10">
+		            	<h:graphicImage height="400px;" value="/images/dynamic/?file=remodeling.jpg"/>
+		                <h:outputText value="Making alterations to an existing structure such that it will be better suited to current needs. This type of workmay involve changing the use of interior space by repositioning walls, replacing bathroom or kitchenfixtures, or other such modifications. Remodeling projects generally incorporate new replacement materials, and are not concerned with maintaininghistoric authenticity." />
+		            </h:panelGrid>
+		        </p:tab>
+		        <p:tab title="Commercial construction">
+		            <h:panelGrid columns="2" cellpadding="10">
+		            	<h:graphicImage height="400px;" value="/images/dynamic/?file=commercialConstruction.jpg"/>
+		                <h:outputText value="commercial building is a building that is used for commercial use. Types can include office buildings, warehouses, or retail (i.e. convenience stores, 'big box' stores, shopping malls, etc.). In urban locations, a commercial building often combines functions, such as an office on levels 2-10, with retail on floor 1." />
+		            </h:panelGrid>
+		        </p:tab>
+		        <p:tab title="Addition">
+		            <h:panelGrid columns="2" cellpadding="10">
+		            	<h:graphicImage height="400px;" value="/images/dynamic/?file=addition.jpg"/>
+		                <h:outputText value="Expansion or extension of a fixed asset (such as a building or structure) by constructing new parts or 'wings'." />
+		            </h:panelGrid>
+		        </p:tab>
+		    </p:accordionPanel>
+		</h:form>
+	</ui:define>
+ 
+</ui:composition>
+</html>

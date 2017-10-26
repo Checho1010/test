@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+
+	<ui:composition template="/WEB-INF/facelets/templates/defaultLayout.xhtml">
+	<ui:define name="title">
+		<h:outputText value="Our Works" />
+	</ui:define>
+	<ui:define name="content">
+		<h:form id="form">
+			<p:imageCompare leftImage="/images/dynamic/?file=antes.jpg"
+            	rightImage="/images/dynamic/?file=despues.jpg"
+                width="450" height="435"/>
+            <h:outputText value="Move the GREEN scroll" />
+            
+            <p:ring id="basic" value="#{ourWorksDatamanager.comparacionList}" var="compare">
+		        <p:outputPanel style="text-align: center;" layout="block">
+		            #{compare.titulo}
+		            <br />
+		            <p:commandButton update=":form:comparisonDetail" icon="ui-icon-search" title="View" oncomplete="PF('comparisonDialog').show();">
+		                <f:setPropertyActionListener value="compare" target="#{ourWorksDatamanager.comparacionSeleccionada}" />
+		            </p:commandButton>
+		        </p:outputPanel>
+		    </p:ring>
+		    
+		    <p:dialog header="Comparison Info" widgetVar="comparisonDialog" modal="true" showEffect="fade" hideEffect="fade" resizable="false" width="500">
+		        <p:outputPanel id="comparisonDetail" style="text-align:center;" layout="block">
+	            	<p:imageCompare leftImage="#{ourWorksDatamanager.comparacionSeleccionada.left}"
+                        rightImage="#{ourWorksDatamanager.comparacionSeleccionada.right}"
+                        width="450" height="435"/>
+            		<h:outputText value="Move the GREEN scroll" />
+		        </p:outputPanel>
+		    </p:dialog>
+		    
+		</h:form>
+	</ui:define>
+ 
+</ui:composition>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+
+	<ui:composition template="/WEB-INF/facelets/templates/defaultLayout.xhtml">
+	<ui:define name="title">
+		<h:outputText value="HOME" />
+	</ui:define>
+	<ui:define name="content">
+		<h:form>
+			<p:accordionPanel>
+		        <p:tab title="About us">
+		            <h:panelGrid columns="2" cellpadding="10">
+		                <h:outputText
+		                    value="We are a serious construction enterprise locate at Chicago...." />
+		            </h:panelGrid>
+		        </p:tab>
+		        <p:tab title="Mission">
+		            <h:panelGrid columns="2" cellpadding="10">
+		                <h:outputText value="Deliver high quality service so we can gather loyal customers" />
+		            </h:panelGrid>
+		        </p:tab>
+		        <p:tab title="Vision">
+		            <h:panelGrid columns="2" cellpadding="10">
+		                <h:outputText value="By 2025 we'll be recognized as the best construction corporation in at least 3 states" />
+		            </h:panelGrid>
+		        </p:tab>
+		    </p:accordionPanel>
+		</h:form>
+	</ui:define>
+ 
+</ui:composition>
+</html>
